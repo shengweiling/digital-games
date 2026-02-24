@@ -1,0 +1,5 @@
+{
+  "name": "有奖数字游戏",
+  "description": "真实还原街头有奖骰子游戏，包含3D骰子动画、棋盘行走逻辑及中奖概率分析。",
+  "requestFramePermissions": []
+}
