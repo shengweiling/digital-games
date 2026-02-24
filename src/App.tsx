@@ -651,12 +651,16 @@ function BoardCell({ cell, active }: { cell: Cell; active: boolean; key?: React.
         {cell.prize}
       </div>
       
-      {active && (
-        <motion.div
-          layoutId="active-glow"
-          className="absolute inset-0 bg-white/20 animate-pulse"
-        />
-      )}
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 bg-white/20 animate-pulse"
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
